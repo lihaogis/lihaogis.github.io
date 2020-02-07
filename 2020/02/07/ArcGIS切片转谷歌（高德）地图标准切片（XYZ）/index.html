@@ -6,15 +6,27 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2020 | MapMonkey</title>
+  <title>ArcGIS切片转谷歌（高德）地图标准切片（XYZ） | MapMonkey</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="MapMonkey">
-<meta property="og:url" content="http://yoursite.com/archives/2020/index.html">
+  <meta name="description" content="&amp;#8194;&amp;#8194;&amp;#8194;&amp;#8194;&amp;#8194;此篇文章主要介绍如何将ArcGIS切片格式装换成符合谷歌（高德）地图标准切片格式，便于项目中地图瓦片请求的统一，方便项目维护，需要注意以下几点。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ArcGIS切片转谷歌（高德）地图标准切片（XYZ）">
+<meta property="og:url" content="http://yoursite.com/2020/02/07/ArcGIS%E5%88%87%E7%89%87%E8%BD%AC%E8%B0%B7%E6%AD%8C%EF%BC%88%E9%AB%98%E5%BE%B7%EF%BC%89%E5%9C%B0%E5%9B%BE%E6%A0%87%E5%87%86%E5%88%87%E7%89%87%EF%BC%88XYZ%EF%BC%89/index.html">
 <meta property="og:site_name" content="MapMonkey">
+<meta property="og:description" content="&amp;#8194;&amp;#8194;&amp;#8194;&amp;#8194;&amp;#8194;此篇文章主要介绍如何将ArcGIS切片格式装换成符合谷歌（高德）地图标准切片格式，便于项目中地图瓦片请求的统一，方便项目维护，需要注意以下几点。">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/6942961-fb370f7ff41153a5.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/6942961-59b0877c40e49c92.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/6942961-68624da6883913aa.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/6942961-2b954ae94637ef57.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/6942961-76f4897f0abea6ba.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/6942961-72bc04d78e64ace6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="article:published_time" content="2020-02-07T06:27:15.000Z">
+<meta property="article:modified_time" content="2020-02-07T06:35:30.887Z">
 <meta property="article:author" content="MapMonkey">
+<meta property="article:tag" content="-WMTS标准">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://upload-images.jianshu.io/upload_images/6942961-fb370f7ff41153a5.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
   
     <link rel="alternative" href="/atom.xml" title="MapMonkey" type="application/atom+xml">
   
@@ -136,36 +148,68 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-ArcGIS切片转谷歌（高德）地图标准切片（XYZ）" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/02/07/ArcGIS%E5%88%87%E7%89%87%E8%BD%AC%E8%B0%B7%E6%AD%8C%EF%BC%88%E9%AB%98%E5%BE%B7%EF%BC%89%E5%9C%B0%E5%9B%BE%E6%A0%87%E5%87%86%E5%88%87%E7%89%87%EF%BC%88XYZ%EF%BC%89/" class="archive-article-date">
-  	<time datetime="2020-02-07T06:27:15.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-07</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/02/07/ArcGIS%E5%88%87%E7%89%87%E8%BD%AC%E8%B0%B7%E6%AD%8C%EF%BC%88%E9%AB%98%E5%BE%B7%EF%BC%89%E5%9C%B0%E5%9B%BE%E6%A0%87%E5%87%86%E5%88%87%E7%89%87%EF%BC%88XYZ%EF%BC%89/">ArcGIS切片转谷歌（高德）地图标准切片（XYZ）</a>
+    <h1 class="article-title" itemprop="name">
+      ArcGIS切片转谷歌（高德）地图标准切片（XYZ）
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2020/02/07/ArcGIS%E5%88%87%E7%89%87%E8%BD%AC%E8%B0%B7%E6%AD%8C%EF%BC%88%E9%AB%98%E5%BE%B7%EF%BC%89%E5%9C%B0%E5%9B%BE%E6%A0%87%E5%87%86%E5%88%87%E7%89%87%EF%BC%88XYZ%EF%BC%89/" class="archive-article-date">
+  	<time datetime="2020-02-07T06:27:15.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-07</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>&#8194;&#8194;&#8194;&#8194;&#8194;此篇文章主要介绍如何将ArcGIS切片格式装换成符合谷歌（高德）地图标准切片格式，便于项目中地图瓦片请求的统一，方便项目维护，需要注意以下几点。</p>
+<a id="more"></a>
+
+<h3 id="1、地图切片原理"><a href="#1、地图切片原理" class="headerlink" title="1、地图切片原理"></a><strong>1、地图切片原理</strong></h3><p><strong>Web墨卡托投影有两个相关的投影标准，经常搞混：</strong></p>
+<p>EPSG4326：Web墨卡托投影后的平面地图，但仍然使用WGS84的经度、纬度表示坐标；</p>
+<p>EPSG3857：Web墨卡托投影后的平面地图，坐标单位为米。</p>
+<h4 id="瓦片编号"><a href="#瓦片编号" class="headerlink" title="瓦片编号"></a>瓦片编号</h4><p>瓦片生成后，就是一堆图片。怎么对这堆图片进行编号，是目前主流互联网地图商分歧最大的地方。总结起来分为四个流派：</p>
+<p>谷歌XYZ：Z表示缩放层级，Z=zoom；XY的原点在左上角，X从左向右，Y从上向下，<strong>ArcServer和高德地图切片规则和谷歌地图一致</strong>。</p>
+<p>TMS：开源产品的标准，Z的定义与谷歌相同；XY的原点在左下角，X从左向右，Y从下向上。</p>
+<p>百度XYZ：Z从1开始，在最高级就把地图分为四块瓦片；XY的原点在经度为0纬度位0的位置，X从左向右，Y从下向上。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/6942961-fb370f7ff41153a5.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="img"></p>
+<center>切图对比
+
+<h3 id="2、ArcGIS切片"><a href="#2、ArcGIS切片" class="headerlink" title="2、ArcGIS切片"></a><strong>2、ArcGIS切片</strong></h3><p>示例选择ArcGIS10.0 作为切图工具，切图模式选择松散型，切图标准选择自带谷歌地图标准，如下图：</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/6942961-59b0877c40e49c92.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="img"></p>
+<center>arcgis切图
+
+<h3 id="3、切片转换工具"><a href="#3、切片转换工具" class="headerlink" title="3、切片转换工具"></a><strong>3、切片转换工具</strong></h3><p>首先ArcGIS切片规则为：L+Z(级别)；R+Y(行号8位16进制)；C+X(列号8位16进制)，如图：</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/6942961-68624da6883913aa.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="img"></p>
+<center>转换前
+
+<p>装换后：</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/6942961-2b954ae94637ef57.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="img"></p>
+<center>转换后
+
+<p>转换工具，同时支持导入sqlite数据库，导出mbtiles格式，作为离线地图使用，工具源码地址如下，欢迎拍砖</p>
+<p>github地址：<a href="https://github.com/lihaogis/MapCacheArcServer2XYZ" target="_blank" rel="noopener">https://github.com/lihaogis/MapCacheArcServer2XYZ</a></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/6942961-76f4897f0abea6ba.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="img"></p>
+<center>转换工具
+
+<p><img src="https://upload-images.jianshu.io/upload_images/6942961-72bc04d78e64ace6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="img"></p>
+<center>sqlite数据库（mbtiles）
+
+<p>参考资料：<a href="https://segmentfault.com/a/1190000011276788" target="_blank" rel="noopener">https://segmentfault.com/a/1190000011276788</a></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -177,133 +221,106 @@
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/02/07/ArcGIS%E5%88%87%E7%89%87%E8%BD%AC%E8%B0%B7%E6%AD%8C%EF%BC%88%E9%AB%98%E5%BE%B7%EF%BC%89%E5%9C%B0%E5%9B%BE%E6%A0%87%E5%87%86%E5%88%87%E7%89%87%EF%BC%88XYZ%EF%BC%89/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/02/07/%E4%BD%BF%E7%94%A8Gulp%E5%8E%8B%E7%BC%A9%E8%87%AA%E5%AE%9A%E4%B9%89%E6%89%A9%E5%B1%95OL/" class="archive-article-date">
-  	<time datetime="2020-02-07T06:15:15.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-07</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2020/02/07/%E4%BD%BF%E7%94%A8Gulp%E5%8E%8B%E7%BC%A9%E8%87%AA%E5%AE%9A%E4%B9%89%E6%89%A9%E5%B1%95OL/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">使用Gulp压缩自定义扩展OL</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/02/07/%E4%BD%BF%E7%94%A8Gulp%E5%8E%8B%E7%BC%A9%E8%87%AA%E5%AE%9A%E4%B9%89%E6%89%A9%E5%B1%95OL/">使用Gulp压缩自定义扩展OL</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">-Gulp -Openlayers</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/02/06/%E7%8B%AC%E7%AB%8B%E7%89%88GeoWebCache%E5%8F%91%E5%B8%83Arcgis10-0%E5%88%87%E7%89%87/" class="archive-article-date">
-  	<time datetime="2020-02-06T13:51:35.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-06</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/02/06/%E7%8B%AC%E7%AB%8B%E7%89%88GeoWebCache%E5%8F%91%E5%B8%83Arcgis10-0%E5%88%87%E7%89%87/">独立版GeoWebCache发布Arcgis10-0切片</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">-GeoWebCache</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/02/06/%E6%88%91%E7%9A%84%E5%8D%9A%E5%AE%A2/" class="archive-article-date">
-  	<time datetime="2020-02-06T07:15:15.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-06</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/02/06/%E6%88%91%E7%9A%84%E5%8D%9A%E5%AE%A2/">我的博客</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">-Hexo -标签</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-  
-    </div></section>
-  
-
-    
 
 
           </div>
@@ -326,8 +343,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
