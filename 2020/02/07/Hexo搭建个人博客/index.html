@@ -6,27 +6,29 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>ArcGIS切片转谷歌（高德）地图标准切片（XYZ） | MapMonkey</title>
+  <title>Hexo搭建个人博客 | MapMonkey</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="&amp;#8194;&amp;#8194;&amp;#8194;&amp;#8194;&amp;#8194;此篇文章主要介绍如何将ArcGIS切片格式装换成符合谷歌（高德）地图标准切片格式，便于项目中地图瓦片请求的统一，方便项目维护，需要注意以下几点。">
+  <meta name="description" content="&amp;#8194;&amp;#8194;&amp;#8194;&amp;#8194;大家好，我是MapMonkey。2020年的春节假期“有点长”，在家也不能忘记学（Z）习（B）今天给大家分享一个Windows系统下基于Hexo快速搭建个人博客的教程，话不多说，直接上货。1、首先是环境要求，具体安装方法自行搜索  Node.js (Node.js 版本需不低于 8.10，建议使用 Node.js 10.0 及以上版本) Gi">
 <meta property="og:type" content="article">
-<meta property="og:title" content="ArcGIS切片转谷歌（高德）地图标准切片（XYZ）">
-<meta property="og:url" content="http://yoursite.com/2020/02/07/ArcGIS%E5%88%87%E7%89%87%E8%BD%AC%E8%B0%B7%E6%AD%8C%EF%BC%88%E9%AB%98%E5%BE%B7%EF%BC%89%E5%9C%B0%E5%9B%BE%E6%A0%87%E5%87%86%E5%88%87%E7%89%87%EF%BC%88XYZ%EF%BC%89/index.html">
+<meta property="og:title" content="Hexo搭建个人博客">
+<meta property="og:url" content="http://yoursite.com/2020/02/07/Hexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/index.html">
 <meta property="og:site_name" content="MapMonkey">
-<meta property="og:description" content="&amp;#8194;&amp;#8194;&amp;#8194;&amp;#8194;&amp;#8194;此篇文章主要介绍如何将ArcGIS切片格式装换成符合谷歌（高德）地图标准切片格式，便于项目中地图瓦片请求的统一，方便项目维护，需要注意以下几点。">
+<meta property="og:description" content="&amp;#8194;&amp;#8194;&amp;#8194;&amp;#8194;大家好，我是MapMonkey。2020年的春节假期“有点长”，在家也不能忘记学（Z）习（B）今天给大家分享一个Windows系统下基于Hexo快速搭建个人博客的教程，话不多说，直接上货。1、首先是环境要求，具体安装方法自行搜索  Node.js (Node.js 版本需不低于 8.10，建议使用 Node.js 10.0 及以上版本) Gi">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/6942961-fb370f7ff41153a5.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/6942961-59b0877c40e49c92.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/6942961-68624da6883913aa.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/6942961-2b954ae94637ef57.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/6942961-76f4897f0abea6ba.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/6942961-72bc04d78e64ace6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="article:published_time" content="2020-02-07T06:27:15.000Z">
-<meta property="article:modified_time" content="2020-02-07T06:35:30.887Z">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/6942961-ef5d4c6273541845.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/6942961-8e991857851619fe.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/6942961-153cdf217515c185.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/6942961-9585d38158a0134c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/6942961-e2f20e10bd4c9623.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/6942961-592a8c7fb606cdae.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/6942961-2463b8c2d1cfcdcf.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/6942961-e91915588449080f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="article:published_time" content="2020-02-07T07:57:15.000Z">
+<meta property="article:modified_time" content="2020-02-07T07:57:43.818Z">
 <meta property="article:author" content="MapMonkey">
-<meta property="article:tag" content="-WMTS标准">
+<meta property="article:tag" content="-Hexo">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://upload-images.jianshu.io/upload_images/6942961-fb370f7ff41153a5.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta name="twitter:image" content="https://upload-images.jianshu.io/upload_images/6942961-ef5d4c6273541845.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
   
     <link rel="alternative" href="/atom.xml" title="MapMonkey" type="application/atom+xml">
   
@@ -148,60 +150,51 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-ArcGIS切片转谷歌（高德）地图标准切片（XYZ）" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-Hexo搭建个人博客" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      ArcGIS切片转谷歌（高德）地图标准切片（XYZ）
+      Hexo搭建个人博客
     </h1>
   
 
         
-        <a href="/2020/02/07/ArcGIS%E5%88%87%E7%89%87%E8%BD%AC%E8%B0%B7%E6%AD%8C%EF%BC%88%E9%AB%98%E5%BE%B7%EF%BC%89%E5%9C%B0%E5%9B%BE%E6%A0%87%E5%87%86%E5%88%87%E7%89%87%EF%BC%88XYZ%EF%BC%89/" class="archive-article-date">
-  	<time datetime="2020-02-07T06:27:15.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-07</time>
+        <a href="/2020/02/07/Hexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" class="archive-article-date">
+  	<time datetime="2020-02-07T07:57:15.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-07</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>&#8194;&#8194;&#8194;&#8194;&#8194;此篇文章主要介绍如何将ArcGIS切片格式装换成符合谷歌（高德）地图标准切片格式，便于项目中地图瓦片请求的统一，方便项目维护，需要注意以下几点。</p>
-<a id="more"></a>
-
-<h3 id="1、地图切片原理"><a href="#1、地图切片原理" class="headerlink" title="1、地图切片原理"></a><strong>1、地图切片原理</strong></h3><p><strong>Web墨卡托投影有两个相关的投影标准，经常搞混：</strong></p>
-<p>EPSG4326：Web墨卡托投影后的平面地图，但仍然使用WGS84的经度、纬度表示坐标；</p>
-<p>EPSG3857：Web墨卡托投影后的平面地图，坐标单位为米。</p>
-<h4 id="瓦片编号"><a href="#瓦片编号" class="headerlink" title="瓦片编号"></a>瓦片编号</h4><p>瓦片生成后，就是一堆图片。怎么对这堆图片进行编号，是目前主流互联网地图商分歧最大的地方。总结起来分为四个流派：</p>
-<p>谷歌XYZ：Z表示缩放层级，Z=zoom；XY的原点在左上角，X从左向右，Y从上向下，<strong>ArcServer和高德地图切片规则和谷歌地图一致</strong>。</p>
-<p>TMS：开源产品的标准，Z的定义与谷歌相同；XY的原点在左下角，X从左向右，Y从下向上。</p>
-<p>百度XYZ：Z从1开始，在最高级就把地图分为四块瓦片；XY的原点在经度为0纬度位0的位置，X从左向右，Y从下向上。</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/6942961-fb370f7ff41153a5.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="img"></p>
-<center>切图对比
-
-<h3 id="2、ArcGIS切片"><a href="#2、ArcGIS切片" class="headerlink" title="2、ArcGIS切片"></a><strong>2、ArcGIS切片</strong></h3><p>示例选择ArcGIS10.0 作为切图工具，切图模式选择松散型，切图标准选择自带谷歌地图标准，如下图：</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/6942961-59b0877c40e49c92.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="img"></p>
-<center>arcgis切图
-
-<h3 id="3、切片转换工具"><a href="#3、切片转换工具" class="headerlink" title="3、切片转换工具"></a><strong>3、切片转换工具</strong></h3><p>首先ArcGIS切片规则为：L+Z(级别)；R+Y(行号8位16进制)；C+X(列号8位16进制)，如图：</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/6942961-68624da6883913aa.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="img"></p>
-<center>转换前
-
-<p>装换后：</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/6942961-2b954ae94637ef57.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="img"></p>
-<center>转换后
-
-<p>转换工具，同时支持导入sqlite数据库，导出mbtiles格式，作为离线地图使用，工具源码地址如下，欢迎拍砖</p>
-<p>github地址：<a href="https://github.com/lihaogis/MapCacheArcServer2XYZ" target="_blank" rel="noopener">https://github.com/lihaogis/MapCacheArcServer2XYZ</a></p>
-<p><img src="https://upload-images.jianshu.io/upload_images/6942961-76f4897f0abea6ba.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="img"></p>
-<center>转换工具
-
-<p><img src="https://upload-images.jianshu.io/upload_images/6942961-72bc04d78e64ace6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="img"></p>
-<center>sqlite数据库（mbtiles）
-
-<p>参考资料：<a href="https://segmentfault.com/a/1190000011276788" target="_blank" rel="noopener">https://segmentfault.com/a/1190000011276788</a></p>
+        <p>&#8194;&#8194;&#8194;&#8194;大家好，我是MapMonkey。2020年的春节假期“有点长”，在家也不能忘记学（Z）习（B）今天给大家分享一个Windows系统下基于Hexo快速搭建个人博客的教程，话不多说，直接上货。<br>1、首先是环境要求，具体安装方法自行搜索</p>
+<ul>
+<li><a href="http://nodejs.org/" target="_blank" rel="noopener">Node.js</a> (Node.js 版本需不低于 8.10，建议使用 Node.js 10.0 及以上版本)</li>
+<li><a href="http://git-scm.com/" target="_blank" rel="noopener">Git</a><br><img src="https://upload-images.jianshu.io/upload_images/6942961-ef5d4c6273541845.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"><br>2、安装Hexo<h5 id="安装hexo"><a href="#安装hexo" class="headerlink" title="安装hexo"></a>安装hexo</h5><blockquote>
+<p>$ npm install -g hexo-cli</p>
+</blockquote>
+<h5 id="请执行下列命令，Hexo-将会在指定文件夹中新建所需要的文件"><a href="#请执行下列命令，Hexo-将会在指定文件夹中新建所需要的文件" class="headerlink" title="请执行下列命令，Hexo 将会在指定文件夹中新建所需要的文件"></a>请执行下列命令，Hexo 将会在指定文件夹中新建所需要的文件</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo init &lt;folder&gt;</span><br><span class="line">cd &lt;folder&gt;</span><br><span class="line">npm install</span><br></pre></td></tr></table></figure>
+<h5 id="查看Hexo是否安装成功"><a href="#查看Hexo是否安装成功" class="headerlink" title="查看Hexo是否安装成功"></a>查看Hexo是否安装成功</h5><img src="https://upload-images.jianshu.io/upload_images/6942961-8e991857851619fe.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"><h5 id="配置-config-yml"><a href="#配置-config-yml" class="headerlink" title="配置_config.yml"></a>配置_config.yml</h5>您可以在 _config.yml 中修改大部分的配置<br><img src="https://upload-images.jianshu.io/upload_images/6942961-153cdf217515c185.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"><h5 id="修改Hexo主题并配置"><a href="#修改Hexo主题并配置" class="headerlink" title="修改Hexo主题并配置"></a>修改Hexo主题并配置</h5><blockquote>
+<p>$ git clone <a href="https://github.com/litten/hexo-theme-yilia.git" target="_blank" rel="noopener">https://github.com/litten/hexo-theme-yilia.git</a> themes/yilia<br><img src="https://upload-images.jianshu.io/upload_images/6942961-9585d38158a0134c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
+</blockquote>
+<h5 id="启动Hexo-此处是修改了主题的（默认主题已被修改）"><a href="#启动Hexo-此处是修改了主题的（默认主题已被修改）" class="headerlink" title="启动Hexo,此处是修改了主题的（默认主题已被修改）"></a>启动Hexo,此处是修改了主题的（默认主题已被修改）</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo g</span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure>
+<img src="https://upload-images.jianshu.io/upload_images/6942961-e2f20e10bd4c9623.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"><br>3、Hexo 部署到 GitHub Pages</li>
+</ul>
+<ol>
+<li><p>新建一个 repository。如果你希望你的站点能通过 &lt;你的 GitHub 用户名&gt;.github.io 域名访问，你的 repository 应该直接命名为 &lt;你的 GitHub 用户名&gt;.github.io</p>
+</li>
+<li><p>安装hexo-deployer-git插件</p>
+<blockquote>
+<p>$ npm install hexo-deployer-git –save<br><img src="https://upload-images.jianshu.io/upload_images/6942961-592a8c7fb606cdae.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"><br>3.再次配置_config.yml<br>deploy:<br>type: git<br>repo: <a href="https://github.com/" target="_blank" rel="noopener">https://github.com/</a><username>/<project><br>branch: gh-pages<br><img src="https://upload-images.jianshu.io/upload_images/6942961-2463b8c2d1cfcdcf.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"><br>4.推送github</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
+<p><img src="https://upload-images.jianshu.io/upload_images/6942961-e91915588449080f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"><br>4、Hexo 主题及其他相关设置后面再详细介绍，当然自己也在不断的摸索当中</p>
+</li>
+</ol>
+<p>参考文献：<a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="noopener">https://hexo.io/zh-cn/docs/</a></p>
 
       
 
@@ -215,7 +208,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">-WMTS标准</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">-Hexo</a>
         		</li>
       		
 		</ul>
@@ -271,7 +264,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/02/07/ArcGIS%E5%88%87%E7%89%87%E8%BD%AC%E8%B0%B7%E6%AD%8C%EF%BC%88%E9%AB%98%E5%BE%B7%EF%BC%89%E5%9C%B0%E5%9B%BE%E6%A0%87%E5%87%86%E5%88%87%E7%89%87%EF%BC%88XYZ%EF%BC%89/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/02/07/Hexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -417,7 +410,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">-WMTS标准</a>
+                <a href="javascript:void(0)" class="js-tag color1">-Hexo</a>
               </li>
             
             <div class="clearfix"></div>
