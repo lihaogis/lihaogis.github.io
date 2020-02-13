@@ -6,29 +6,34 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Hexo搭建个人博客 | MapMonkey</title>
+  <title>基于ASP-NET-Core+Swagger创建数据交互接口 | MapMonkey</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="&amp;#8194;&amp;#8194;&amp;#8194;&amp;#8194;大家好，我是MapMonkey。2020年的春节假期“有点长”，在家也不能忘记学（Z）习（B）今天给大家分享一个Windows系统下基于Hexo快速搭建个人博客的教程，话不多说，直接上货。">
+  <meta name="description" content="&amp;#8194;&amp;#8194;&amp;#8194;&amp;#8194;大家好，我是MapMonkey。今天给大家分享一个强大的API文档工具-Swagger。 1、概述Swagger 是一个规范和完整的框架，用于生成、描述、调用和可视化 RESTful 风格的 Web 服务。总体目标是使客户端和文件系统作为服务器以同样的速度来更新。文件的方法，参数和模型紧密集成到服务器端的代码，允许API来始终保持同步。其作用">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hexo搭建个人博客">
-<meta property="og:url" content="http://yoursite.com/2020/02/07/Hexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/index.html">
+<meta property="og:title" content="基于ASP-NET-Core+Swagger创建数据交互接口">
+<meta property="og:url" content="http://yoursite.com/2020/02/13/%E5%9F%BA%E4%BA%8EASP-NET-Core+Swagger%E5%88%9B%E5%BB%BA%E6%95%B0%E6%8D%AE%E4%BA%A4%E4%BA%92%E6%8E%A5%E5%8F%A3/index.html">
 <meta property="og:site_name" content="MapMonkey">
-<meta property="og:description" content="&amp;#8194;&amp;#8194;&amp;#8194;&amp;#8194;大家好，我是MapMonkey。2020年的春节假期“有点长”，在家也不能忘记学（Z）习（B）今天给大家分享一个Windows系统下基于Hexo快速搭建个人博客的教程，话不多说，直接上货。">
+<meta property="og:description" content="&amp;#8194;&amp;#8194;&amp;#8194;&amp;#8194;大家好，我是MapMonkey。今天给大家分享一个强大的API文档工具-Swagger。 1、概述Swagger 是一个规范和完整的框架，用于生成、描述、调用和可视化 RESTful 风格的 Web 服务。总体目标是使客户端和文件系统作为服务器以同样的速度来更新。文件的方法，参数和模型紧密集成到服务器端的代码，允许API来始终保持同步。其作用">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/6942961-ef5d4c6273541845.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/6942961-8e991857851619fe.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/6942961-153cdf217515c185.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/6942961-9585d38158a0134c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/6942961-e2f20e10bd4c9623.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/6942961-592a8c7fb606cdae.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/6942961-2463b8c2d1cfcdcf.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/6942961-e91915588449080f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="article:published_time" content="2020-02-07T07:57:15.000Z">
-<meta property="article:modified_time" content="2020-02-08T07:18:52.851Z">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/6942961-1e8f96d9c15935d3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/6942961-df2735cdbbb8fcc8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/6942961-9ff14525d29689f6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/6942961-0f0b35b4797dc645.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/6942961-32077cc491353f03.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/6942961-2c6f618761198151.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/6942961-e1c2b4969d3eaf9f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/6942961-821673ab1326b479.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/6942961-5e73fbf025f7f4cb.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/6942961-ff30b2ba03f47c08.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/6942961-55b5a71080c464e2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/6942961-480f26c0097e3daa.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/6942961-fb7a4fb2637bcfd0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="article:published_time" content="2020-02-13T11:47:15.000Z">
+<meta property="article:modified_time" content="2020-02-13T11:47:58.178Z">
 <meta property="article:author" content="MapMonkey">
-<meta property="article:tag" content="-Hexo">
+<meta property="article:tag" content="-Swagger">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://upload-images.jianshu.io/upload_images/6942961-ef5d4c6273541845.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta name="twitter:image" content="https://upload-images.jianshu.io/upload_images/6942961-1e8f96d9c15935d3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
   
     <link rel="alternative" href="/atom.xml" title="MapMonkey" type="application/atom+xml">
   
@@ -156,20 +161,20 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-Hexo搭建个人博客" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-基于ASP-NET-Core+Swagger创建数据交互接口" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      Hexo搭建个人博客
+      基于ASP-NET-Core+Swagger创建数据交互接口
     </h1>
   
 
         
-        <a href="/2020/02/07/Hexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" class="archive-article-date">
-  	<time datetime="2020-02-07T07:57:15.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-07</time>
+        <a href="/2020/02/13/%E5%9F%BA%E4%BA%8EASP-NET-Core+Swagger%E5%88%9B%E5%BB%BA%E6%95%B0%E6%8D%AE%E4%BA%A4%E4%BA%92%E6%8E%A5%E5%8F%A3/" class="archive-article-date">
+  	<time datetime="2020-02-13T11:47:15.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-13</time>
 </a>
         
 		 
@@ -181,40 +186,50 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>&#8194;&#8194;&#8194;&#8194;大家好，我是MapMonkey。2020年的春节假期“有点长”，在家也不能忘记学（Z）习（B）今天给大家分享一个Windows系统下基于Hexo快速搭建个人博客的教程，话不多说，直接上货。</p>
-<a id="more"></a>
-
-<p>1、首先是环境要求，具体安装方法自行搜索</p>
+        <p>&#8194;&#8194;&#8194;&#8194;大家好，我是MapMonkey。今天给大家分享一个强大的API文档工具-Swagger。</p>
+<h3 id="1、概述"><a href="#1、概述" class="headerlink" title="1、概述"></a>1、概述</h3><p>Swagger 是一个规范和完整的框架，用于生成、描述、调用和可视化 RESTful 风格的 Web 服务。总体目标是使客户端和文件系统作为服务器以同样的速度来更新。文件的方法，参数和模型紧密集成到服务器端的代码，允许API来始终保持同步。其作用主要是 1. 接口的文档在线自动生成；2. 接口功能测试。<br>网管地址：<a href="https://swagger.io/" target="_blank" rel="noopener">https://swagger.io/</a><br><img src="https://upload-images.jianshu.io/upload_images/6942961-1e8f96d9c15935d3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="官网截图"><br>Swagger官网主要提供了几种开源工具：</p>
 <ul>
-<li><a href="http://nodejs.org/" target="_blank" rel="noopener">Node.js</a> (Node.js 版本需不低于 8.10，建议使用 Node.js 10.0 及以上版本)</li>
-<li><a href="http://git-scm.com/" target="_blank" rel="noopener">Git</a><br><img src="https://upload-images.jianshu.io/upload_images/6942961-ef5d4c6273541845.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"><br>2、安装Hexo<h5 id="安装hexo"><a href="#安装hexo" class="headerlink" title="安装hexo"></a>安装hexo</h5><blockquote>
-<p>$ npm install -g hexo-cli</p>
-</blockquote>
-<h5 id="请执行下列命令，Hexo-将会在指定文件夹中新建所需要的文件"><a href="#请执行下列命令，Hexo-将会在指定文件夹中新建所需要的文件" class="headerlink" title="请执行下列命令，Hexo 将会在指定文件夹中新建所需要的文件"></a>请执行下列命令，Hexo 将会在指定文件夹中新建所需要的文件</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo init &lt;folder&gt;</span><br><span class="line">cd &lt;folder&gt;</span><br><span class="line">npm install</span><br></pre></td></tr></table></figure>
-<h5 id="查看Hexo是否安装成功"><a href="#查看Hexo是否安装成功" class="headerlink" title="查看Hexo是否安装成功"></a>查看Hexo是否安装成功</h5><img src="https://upload-images.jianshu.io/upload_images/6942961-8e991857851619fe.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"><h5 id="配置-config-yml"><a href="#配置-config-yml" class="headerlink" title="配置_config.yml"></a>配置_config.yml</h5>您可以在 _config.yml 中修改大部分的配置<br><img src="https://upload-images.jianshu.io/upload_images/6942961-153cdf217515c185.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"><h5 id="修改Hexo主题并配置"><a href="#修改Hexo主题并配置" class="headerlink" title="修改Hexo主题并配置"></a>修改Hexo主题并配置</h5><blockquote>
-<p>$ git clone <a href="https://github.com/litten/hexo-theme-yilia.git" target="_blank" rel="noopener">https://github.com/litten/hexo-theme-yilia.git</a> themes/yilia<br><img src="https://upload-images.jianshu.io/upload_images/6942961-9585d38158a0134c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
-</blockquote>
-<h5 id="启动Hexo-此处是修改了主题的（默认主题已被修改）"><a href="#启动Hexo-此处是修改了主题的（默认主题已被修改）" class="headerlink" title="启动Hexo,此处是修改了主题的（默认主题已被修改）"></a>启动Hexo,此处是修改了主题的（默认主题已被修改）</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo g</span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure>
-<img src="https://upload-images.jianshu.io/upload_images/6942961-e2f20e10bd4c9623.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"><br>3、Hexo 部署到 GitHub Pages</li>
+<li>Swagger Codegen: 通过Codegen 可以将描述文件生成html格式和cwiki形式的接口文档，同时也能生成多钟语言的服务端和客户端的代码。支持通过jar包，docker，node等方式在本地化执行生成。也可以在后面的Swagger Editor中在线生成。</li>
+<li>Swagger UI:提供了一个可视化的UI页面展示描述文件。接口的调用方、测试、项目经理等都可以在该页面中对相关接口进行查阅和做一些简单的接口请求。该项目支持在线导入描述文件和本地部署UI项目。</li>
+<li>Swagger Editor: 类似于markendown编辑器的编辑Swagger描述文件的编辑器，该编辑支持实时预览描述文件的更新效果。也提供了在线编辑器和本地部署编辑器两种方式。</li>
+<li>Swagger Inspector: 感觉和postman差不多，是一个可以对接口进行测试的在线版的postman。比在Swagger UI里面做接口请求，会返回更多的信息，也会保存你请求的实际请求参数等数据。</li>
+<li>Swagger Hub：集成了上面所有项目的各个功能，你可以以项目和版本为单位，将你的描述文件上传到Swagger Hub中。</li>
 </ul>
-<ol>
-<li><p>新建一个 repository。如果你希望你的站点能通过 &lt;你的 GitHub 用户名&gt;.github.io 域名访问，你的 repository 应该直接命名为 &lt;你的 GitHub 用户名&gt;.github.io</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/6942961-592a8c7fb606cdae.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
+<h3 id="2、ASP-NET-Core后台交互"><a href="#2、ASP-NET-Core后台交互" class="headerlink" title="2、ASP.NET Core后台交互"></a>2、ASP.NET Core后台交互</h3><ul>
+<li><h4 id="环境VS2019"><a href="#环境VS2019" class="headerlink" title="环境VS2019"></a>环境VS2019</h4><p><img src="https://upload-images.jianshu.io/upload_images/6942961-df2735cdbbb8fcc8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
 </li>
-</ol>
-<ol start="2">
-<li><p>安装hexo-deployer-git插件</p>
-<blockquote>
-<p>$ npm install hexo-deployer-git –save</p>
-</blockquote>
-<p>3.再次配置_config.yml<br>  deploy:<br>  type: git<br>  repo: <a href="https://github.com/" target="_blank" rel="noopener">https://github.com/</a><username>/<project><br>  branch: gh-pages</p>
+<li><h4 id="创建项目"><a href="#创建项目" class="headerlink" title="创建项目"></a>创建项目</h4><p>选择<strong>创建新项目</strong>，下一步<strong>ASP.NET Core Web应用程序</strong>，选择相应的文件路径，选择Core版本**<em>API项目</em>，开始创建。 <img src="https://upload-images.jianshu.io/upload_images/6942961-9ff14525d29689f6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
 </li>
-</ol>
-<p><img src="https://upload-images.jianshu.io/upload_images/6942961-2463b8c2d1cfcdcf.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
-<p>  4.推送github</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
-<p><img src="https://upload-images.jianshu.io/upload_images/6942961-e91915588449080f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"><br>4、Hexo 主题及其他相关设置后面再详细介绍，当然自己也在不断的摸索当中</p>
-<p>参考文献：<a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="noopener">https://hexo.io/zh-cn/docs/</a></p>
+</ul>
+<p><strong>Controllers</strong>右击添加控制器,此处添加一个默认的控制器<br><img src="https://upload-images.jianshu.io/upload_images/6942961-0f0b35b4797dc645.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
+<p>运行程序，在浏览器输入<strong>[<a href="https://localhost:44322/api/default]" target="_blank" rel="noopener">https://localhost:44322/api/default]</a></strong>(根据自己的地址进行输入),如下图所示：<br><img src="https://upload-images.jianshu.io/upload_images/6942961-32077cc491353f03.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
+<h3 id="3、Swagger工具集成"><a href="#3、Swagger工具集成" class="headerlink" title="3、Swagger工具集成"></a>3、Swagger工具集成</h3><ul>
+<li><h4 id="安装程序包"><a href="#安装程序包" class="headerlink" title="安装程序包"></a>安装程序包</h4><p>【项目】—【管理NuGet程序包】—【浏览】中搜索“swagger”，安装前三个<br><img src="https://upload-images.jianshu.io/upload_images/6942961-2c6f618761198151.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
+</li>
+<li><h4 id="配置Startup-cs文件"><a href="#配置Startup-cs文件" class="headerlink" title="配置Startup.cs文件"></a>配置Startup.cs文件</h4></li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">services.AddSwaggerGen(c &#x3D;&gt;</span><br><span class="line"> &#123;</span><br><span class="line">  c.SwaggerDoc(&quot;v1&quot;, new OpenApiInfo &#123; Title &#x3D; &quot;API 接口&quot;, Version &#x3D; &quot;v1&quot; &#125;);</span><br><span class="line"> &#125;);</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://upload-images.jianshu.io/upload_images/6942961-e1c2b4969d3eaf9f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">app.UseSwagger();</span><br><span class="line">app.UseSwaggerUI(c &#x3D;&gt;</span><br><span class="line">&#123;</span><br><span class="line"> c.SwaggerEndpoint(&quot;&#x2F;swagger&#x2F;v1&#x2F;swagger.json&quot;, &quot;My API V1&quot;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://upload-images.jianshu.io/upload_images/6942961-821673ab1326b479.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
+<ul>
+<li><h4 id="运行程序，在浏览器输入，如下图所示即表示成功https-localhost-44322-swagger-index-html"><a href="#运行程序，在浏览器输入，如下图所示即表示成功https-localhost-44322-swagger-index-html" class="headerlink" title="运行程序，在浏览器输入，如下图所示即表示成功https://localhost:44322/swagger/index.html"></a>运行程序，在浏览器输入，如下图所示即表示成功<a href="https://localhost:44322/swagger/index.html" target="_blank" rel="noopener">https://localhost:44322/swagger/index.html</a></h4><p><img src="https://upload-images.jianshu.io/upload_images/6942961-5e73fbf025f7f4cb.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
+</li>
+<li><h4 id="启用XML注释"><a href="#启用XML注释" class="headerlink" title="启用XML注释"></a>启用XML注释</h4><p>右键单击“解决方案资源管理器”中的项目，然后选择“属性”<br>查看“生成”选项卡的“输出”部分下的“XML 文档文件”框<br><img src="https://upload-images.jianshu.io/upload_images/6942961-ff30b2ba03f47c08.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
+</li>
+<li><h4 id="配置Startup-cs文件-1"><a href="#配置Startup-cs文件-1" class="headerlink" title="配置Startup.cs文件"></a>配置Startup.cs文件</h4></li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;Locate the XML file being generated by ASP.NET...</span><br><span class="line"> var xmlFile &#x3D; $&quot;&#123;Assembly.GetExecutingAssembly().GetName().Name&#125;.XML&quot;;</span><br><span class="line"> var xmlPath &#x3D; Path.Combine(AppContext.BaseDirectory, xmlFile);\</span><br><span class="line"> &#x2F;&#x2F;... and tell Swagger to use those XML comments.</span><br><span class="line"> c.IncludeXmlComments(xmlPath);</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://upload-images.jianshu.io/upload_images/6942961-55b5a71080c464e2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
+<ul>
+<li><h4 id="代码中添加注释"><a href="#代码中添加注释" class="headerlink" title="代码中添加注释"></a>代码中添加注释</h4><p><img src="https://upload-images.jianshu.io/upload_images/6942961-480f26c0097e3daa.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
+</li>
+<li><h4 id="运行程序，查看结果"><a href="#运行程序，查看结果" class="headerlink" title="运行程序，查看结果"></a>运行程序，查看结果</h4><p><img src="https://upload-images.jianshu.io/upload_images/6942961-fb7a4fb2637bcfd0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"><br>参考文献：<a href="https://docs.microsoft.com/zh-cn/aspnet/core/web-api/?view=aspnetcore-3.1" target="_blank" rel="noopener">https://docs.microsoft.com/zh-cn/aspnet/core/web-api/?view=aspnetcore-3.1</a></p>
+</li>
+</ul>
 
       
 
@@ -259,7 +274,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">-Hexo</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">-Swagger</a>
         		</li>
       		
 		</ul>
@@ -315,7 +330,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/02/07/Hexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/02/13/%E5%9F%BA%E4%BA%8EASP-NET-Core+Swagger%E5%88%9B%E5%BB%BA%E6%95%B0%E6%8D%AE%E4%BA%A4%E4%BA%92%E6%8E%A5%E5%8F%A3/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -329,18 +344,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2020/02/13/%E5%9F%BA%E4%BA%8EASP-NET-Core+Swagger%E5%88%9B%E5%BB%BA%E6%95%B0%E6%8D%AE%E4%BA%A4%E4%BA%92%E6%8E%A5%E5%8F%A3/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          基于ASP-NET-Core+Swagger创建数据交互接口
-        
-      </div>
-    </a>
   
-  
-    <a href="/2020/02/07/%E4%BD%BF%E7%94%A8Gulp%E5%8E%8B%E7%BC%A9%E8%87%AA%E5%AE%9A%E4%B9%89%E6%89%A9%E5%B1%95OL/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">使用Gulp压缩自定义扩展OL</div>
+    <a href="/2020/02/07/Hexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Hexo搭建个人博客</div>
       <i class="icon-circle-right"></i>
     </a>
   
